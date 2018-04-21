@@ -1,91 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <title>Document</title>
+
 </head>
+
 <body>
-    <div class="container">
-        <div class="jumbotron text-center">
-                <h1 class="display-4">Employee Data Management</h1>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                <hr class="my-4">
-             
-             
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1 class="display-4">Employee Data Management</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+
+
+    </div>
+
+    <table class="table">
+      <thead class="thead-dark">
+
+        <tr>
+          <th scope="col">Employee Name</th>
+          <th scope="col">Role</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">Months Worked</th>
+          <th scope="col">Monthly Rate ($)</th>
+          <th scope="col">Total Billed ($)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>Accounting</td>
+        </tr>
+        <tr>
+
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>Sales</td>
+        </tr>
+        <tr>
+
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>CFO</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="row">
+
+      <!-- Sign-Up Card-->
+      <div class="col-lg-6">
+        <div class="card card-default">
+          <div class="card-heading">
+            <h3 class="card-title">Add New Employee</h3>
+          </div>
+          <div class="card-body">
+
+            <!-- Sign-up Form (note the various input "types")-->
+            <form role="form">
+              <div class="form-group row">
+                <label for="name-input">Name:</label>
+                <input class="form-control" id="name-input" type="text">
+              </div>
+              <div class="form-group row">
+                <label for="role-input">Role</label>
+                <input class="form-control" id="role-input" type="role">
+              </div>
+              <div class="form-group row">
+                <label for="date-input">Start Date</label>
+                <input class="form-control" id="date-input" type="number">
+              </div>
+              <div class="form-group row">
+                <label for="rate-input">Monthly Rate</label>
+                <input class="form-control" id="rate-input" type="number">
               </div>
 
-              <table class="table">
-                    <thead class="thead-dark">
-                    
-                      <tr>
-                          <th scope="col">Employee Name</th>
-                          <th scope="col">Role</th>
-                          <th scope="col">Start Date</th>
-                          <th scope="col">Months Worked</th>
-                          <th scope="col">Monthly Rate ($)</th>
-                          <th scope="col">Total Billed ($)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>Accounting</td>
-                      </tr>
-                      <tr>
-                      
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>Sales</td>
-                      </tr>
-                      <tr>
-                        
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>CFO</td>
-                      </tr>
-                    </tbody>
-                  </table>
-              
-                  <div class="row">
+              <button class="btn btn-primary" id="add-user" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
 
-                      <!-- Sign-Up Card-->
-                      <div class="col-lg-6">
-                        <div class="card card-default">
-                          <div class="card-heading">
-                            <h3 class="card-title">Add New Employee</h3>
-                          </div>
-                          <div class="card-body">
-                
-                            <!-- Sign-up Form (note the various input "types")-->
-                            <form role="form">
-                              <div class="form-group row">
-                                <label for="name-input">Name:</label>
-                                <input class="form-control" id="name-input" type="text">
-                              </div>
-                              <div class="form-group row">
-                                <label for="role-input">Role</label>
-                                <input class="form-control" id="role-input" type="role">
-                              </div>
-                              <div class="form-group row">
-                                <label for="date-input">Start Date</label>
-                                <input class="form-control" id="date-input" type="number">
-                              </div>
-                              <div class="form-group row">
-                                  <label for="rate-input">Monthly Rate</label>
-                                  <input class="form-control" id="rate-input" type="number">
-                                </div>
-                      
-                              <button class="btn btn-primary" id="add-user" type="submit">Submit</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                
-                  
-                    
+
+
 </body>
+
 </html>
