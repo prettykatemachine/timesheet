@@ -19,10 +19,24 @@ var rate;
 // Capture Button Click
 $("#add-user").on("click", function(event) {
     event.preventDefault();
+  // Grabbed values from text boxes
+  employeeName = $("#name-input").val().trim();
+  role = $("#role-input").val().trim();
+  startDate = $("#date-input").val().trim();
+  rate = $("#rate-input").val().trim();
 
-    // Grabbed values from text boxes
-    name = $("#name-input").val().trim();
-    email = $("#role-input").val().trim();
-    age = $("#date-input").val().trim();
-    comment = $("#rate-input").val().trim();
-});
+  console.log(employeeName);
+  console.log(role);
+  console.log(startDate);
+  console.log(rate);
+
+
+    //create an object to hold the data
+    var employeeData =  {
+        EmployeeName:employeeName,
+        EmployeeRole: startDate,
+        MonthlyRate:rate
+  };
+    //push the data into the database
+    database.ref().push(employeeData);
+  });
