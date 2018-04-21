@@ -15,3 +15,14 @@ var employeeName;
 var role;
 var startDate;
 var rate;
+
+// Capture Button Click
+$("#add-user").on("click", function(event) {
+    event.preventDefault();
+
+    // Grabbed values from text boxes
+    name = $("#name-input").val().trim();
+    email = $("#role-input").val().trim();
+    age = $("#date-input").val().trim();
+    comment = $("#rate-input").val().trim();
+});
